@@ -1,7 +1,7 @@
 
 // selectors
 const search_btn = document.querySelector(".fa-search")
-const input = document.querySelector('.input')
+const input = document.querySelector('.input-search')
 const recipe_container = document.querySelector('.recipe-container')
 
 // functions
@@ -10,7 +10,6 @@ const recipe_container = document.querySelector('.recipe-container')
 // function for addding html data
 const createRecipe = (recipeArr) => {
     let html = "";
-    console.log(recipeArr);
     recipeArr.map((recipe) => {
         html += `<div class="card recipe" style="width: 18rem;">
         <img class="card-img-top"style="width: 100%;" src=${recipe.recipe.image} alt=${recipe.recipe.label}>
