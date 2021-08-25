@@ -10,6 +10,11 @@ const recipe_container = document.querySelector('.recipe-container')
 // function for addding html data
 const createRecipe = (recipeArr) => {
     let html = "";
+    if(recipeArr.length===0)
+    {
+      html+=`<h1 class="center"> No recipe Found </h1>`
+    }
+    else{
     recipeArr.map((recipe) => {
         html += `<div class="card recipe" style="width: 18rem;">
         <img class="card-img-top"style="width: 100%;" src=${recipe.recipe.image} alt=${recipe.recipe.label}>
@@ -20,6 +25,7 @@ const createRecipe = (recipeArr) => {
         </div>
       </div> `
     })
+  }
     recipe_container.innerHTML = html;
     input.value = "";
 }
